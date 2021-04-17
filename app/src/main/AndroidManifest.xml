@@ -16,6 +16,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AnalyzeMeal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewPrevReports"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewPrevMeals"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoggedInMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignIn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignOut"
+            android:screenOrientation="portrait" >
+        </activity>
+
     </application>
 
 </manifest>
