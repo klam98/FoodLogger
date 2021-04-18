@@ -14,9 +14,9 @@ public class SignOut extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_out);
 
-        Button signUpBtn = (Button) findViewById(R.id.sign_up_btn);
+        Button signOutBtn = (Button) findViewById(R.id.sign_out_btn);
 
-        btnPress(signUpBtn, MainActivity.makeIntent(SignOut.this));
+        btnPress(signOutBtn, MainActivity.makeIntent(SignOut.this));
     }
 
     private void btnPress(Button button, final Intent intent) {
