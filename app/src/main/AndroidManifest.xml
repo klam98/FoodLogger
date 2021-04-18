@@ -39,6 +39,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".SignOut"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewSpecificReport"
             android:screenOrientation="portrait" >
         </activity>
 

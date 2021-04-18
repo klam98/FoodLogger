@@ -8,17 +8,15 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SignOut extends AppCompatActivity {
+public class ViewSpecificReport extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_out);
+        setContentView(R.layout.specific_report);
 
-        Button signOutBtn = (Button) findViewById(R.id.sign_out_btn);
-        Button signOutBackBtn = (Button) findViewById(R.id.sign_out_back_btn);
+        Button viewSpecificReportBackBtn = (Button) findViewById(R.id.report_back_btn);
 
-        btnPress(signOutBtn, MainActivity.makeIntent(SignOut.this));
-        btnPress(signOutBackBtn, LoggedInMenu.makeIntent(SignOut.this));
+        btnPress(viewSpecificReportBackBtn, ViewPrevReports.makeIntent(ViewSpecificReport.this));
     }
 
     private void btnPress(Button button, final Intent intent) {
@@ -31,6 +29,6 @@ public class SignOut extends AppCompatActivity {
     }
 
     public static Intent makeIntent(Context context) {
-        return new Intent(context, SignOut.class);
+        return new Intent(context, ViewSpecificReport.class);
     }
 }
