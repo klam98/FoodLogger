@@ -44,6 +44,10 @@
             android:name=".ViewSpecificReport"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name=".SubscribePremium"
+            android:screenOrientation="portrait" >
+        </activity>
 
     </application>
 

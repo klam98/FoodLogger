@@ -43,6 +43,16 @@
             tools:visibility="visible" />
 
     </LinearLayout>
+    //SUB2PREMIUM
+    <Button
+        android:id="@+id/sub2premium"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Subscribe to Premium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
