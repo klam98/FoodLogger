@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 public class ViewSpecificReport extends AppCompatActivity {
     @Override
@@ -15,8 +16,27 @@ public class ViewSpecificReport extends AppCompatActivity {
         setContentView(R.layout.specific_report);
 
         Button viewSpecificReportBackBtn = (Button) findViewById(R.id.report_back_btn);
+        Button macronutrientBtn = (Button) findViewById(R.id.macronutrient_btn);
+        Button micronutrientBtn = (Button) findViewById(R.id.micronutrient_btn);
+        viewSpecificReportBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
-        btnPress(viewSpecificReportBackBtn, ViewPrevReports.makeIntent(ViewSpecificReport.this));
+        macronutrientBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Begin the transaction
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                // Replace the contents of the container with the new fragment
+                ft.replace(R.id.micro_macro_nutrients, new MacronutrientFragment());
+                // or ft.add(R.id.your_placeholder, new FooFragment());
+                // Complete the changes added above
+                ft.commit();
+            }
+        });
     }
 
     private void btnPress(Button button, final Intent intent) {

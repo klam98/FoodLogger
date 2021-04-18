@@ -24,7 +24,12 @@ public class ViewPrevReports extends AppCompatActivity {
         Button specificReportBtn7 = (Button) findViewById(R.id.specific_report_btn7);
         Button specificReportBtn8 = (Button) findViewById(R.id.specific_report_btn8);
 
-        btnPress(prevReportBackBtn, LoggedInMenu.makeIntent(ViewPrevReports.this));
+        prevReportBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         btnPress(specificReportBtn, ViewSpecificReport.makeIntent(ViewPrevReports.this));
         btnPress(specificReportBtn2, ViewSpecificReport.makeIntent(ViewPrevReports.this));
         btnPress(specificReportBtn3, ViewSpecificReport.makeIntent(ViewPrevReports.this));
