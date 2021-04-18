@@ -8,14 +8,15 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ViewPrevMeals  extends AppCompatActivity {
+public class ViewSpecificReport extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.prev_meals_list);
+        setContentView(R.layout.specific_report);
 
-        Button prevMealsBackBtn = (Button) findViewById(R.id.prev_meal_back_btn);
-        btnPress(prevMealsBackBtn, LoggedInMenu.makeIntent(ViewPrevMeals.this));
+        Button viewSpecificReportBackBtn = (Button) findViewById(R.id.report_back_btn);
+
+        btnPress(viewSpecificReportBackBtn, ViewPrevReports.makeIntent(ViewSpecificReport.this));
     }
 
     private void btnPress(Button button, final Intent intent) {
@@ -28,6 +29,6 @@ public class ViewPrevMeals  extends AppCompatActivity {
     }
 
     public static Intent makeIntent(Context context) {
-        return new Intent(context, ViewPrevMeals.class);
+        return new Intent(context, ViewSpecificReport.class);
     }
 }
