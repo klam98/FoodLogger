@@ -64,7 +64,7 @@ public class AnalyzeMeal extends AppCompatActivity {
             }
         });
 
-        btnPress(generateReportBtn, MealReport.makeIntent(AnalyzeMeal.this));
+        btnPress(generateReportBtn, ViewSpecificReport.makeIntent(AnalyzeMeal.this));
     }
 
     private void btnPress(Button button, final Intent intent) {
