@@ -34,22 +34,29 @@ public class SubscribePremium extends AppCompatActivity {
         cvvInput = (EditText) findViewById(R.id.cvvInput);
 
 
+        Button subscribePremiumBackBtn = (Button) findViewById(R.id.sub_back_btn);
         submitButton = (Button) findViewById(R.id.submitButton);
-        btnPress(submitButton, LoggedInMenu.makeIntent(SubscribePremium.this));
-//        submitButton.setOnClickListener(new View.OnClickListener() {
-////            @Override
-//            public void onClick(View v) {
-//
-//
-//            }
-//        });
 
+        btnPress(subscribePremiumBackBtn, LoggedInMenu.makeIntent(SubscribePremium.this));
+        subBtnPress(submitButton, LoggedInMenu.makeIntent(SubscribePremium.this));
     }
 
+    // regular button press for the back button
     private void btnPress(Button button, final Intent intent) {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
+    }
+
+    // subscribe button press that modifies static boolean isPremiumUser and displays msg
+    private void subBtnPress(Button button, final Intent intent) {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoggedInMenu.setIsPremiumUser(true);
                 Toast toast = Toast.makeText(SubscribePremium.this, "You are now a premium user!", Toast.LENGTH_LONG);
                 toast.show();
                 startActivity(intent);
@@ -57,12 +64,6 @@ public class SubscribePremium extends AppCompatActivity {
         });
     }
 
-
-
-
-    //    private void showToast(String text){
-//        Toast.makeText(SubscribePremium.this, text, Toast.LENGTH_SHORT).show();
-//    }
     public static Intent makeIntent(Context context) {
         return new Intent(context, SubscribePremium.class);
     }

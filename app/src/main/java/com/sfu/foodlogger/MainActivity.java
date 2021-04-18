@@ -19,15 +19,14 @@ public class MainActivity extends AppCompatActivity {
         Button createAccountBtn = (Button) findViewById(R.id.create_account_btn);
         Button logInBtn = (Button) findViewById(R.id.log_in_btn);
 
-        //subscribe to premium button
-        Button subscribe = (Button) findViewById(R.id.sub2premium);
+//        subscribe to premium button
+//        Button subscribe = (Button) findViewById(R.id.sub2premium);
 
         btnPress(createAccountBtn, SignUp.makeIntent(MainActivity.this));
         btnPress(logInBtn, SignIn.makeIntent(MainActivity.this));
 
-        //subscribe to premium button press event
-        btnPress(subscribe, SubscribePremium.makeIntent(MainActivity.this));
-
+//        subscribe to premium button press event
+//        btnPress(subscribe, SubscribePremium.makeIntent(MainActivity.this));
     }
 
     private void btnPress(Button button, final Intent intent) {
