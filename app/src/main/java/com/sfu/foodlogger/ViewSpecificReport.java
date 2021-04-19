@@ -25,6 +25,19 @@ public class ViewSpecificReport extends AppCompatActivity {
             }
         });
 
+        micronutrientBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Begin the transaction
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                // Replace the contents of the container with the new fragment
+                ft.replace(R.id.micro_macro_nutrients, new MicronutrientFragment());
+                // or ft.add(R.id.your_placeholder, new FooFragment());
+                // Complete the changes added above
+                ft.commit();
+            }
+        });
+
         macronutrientBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
