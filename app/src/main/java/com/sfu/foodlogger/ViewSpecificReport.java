@@ -15,9 +15,14 @@ public class ViewSpecificReport extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.specific_report);
 
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.micro_macro_nutrients, new MacronutrientFragment());
+        ft.commit();
+
         Button viewSpecificReportBackBtn = (Button) findViewById(R.id.report_back_btn);
         Button macronutrientBtn = (Button) findViewById(R.id.macronutrient_btn);
         Button micronutrientBtn = (Button) findViewById(R.id.micronutrient_btn);
+
         viewSpecificReportBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,12 +33,8 @@ public class ViewSpecificReport extends AppCompatActivity {
         micronutrientBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Begin the transaction
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                // Replace the contents of the container with the new fragment
                 ft.replace(R.id.micro_macro_nutrients, new MicronutrientFragment());
-                // or ft.add(R.id.your_placeholder, new FooFragment());
-                // Complete the changes added above
                 ft.commit();
             }
         });
@@ -41,12 +42,8 @@ public class ViewSpecificReport extends AppCompatActivity {
         macronutrientBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Begin the transaction
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                // Replace the contents of the container with the new fragment
                 ft.replace(R.id.micro_macro_nutrients, new MacronutrientFragment());
-                // or ft.add(R.id.your_placeholder, new FooFragment());
-                // Complete the changes added above
                 ft.commit();
             }
         });

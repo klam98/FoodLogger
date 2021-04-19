@@ -15,14 +15,10 @@ public class ViewPrevMeals  extends AppCompatActivity {
         setContentView(R.layout.prev_meals_list);
 
         Button prevMealsBackBtn = (Button) findViewById(R.id.prev_meal_back_btn);
-        btnPress(prevMealsBackBtn, LoggedInMenu.makeIntent(ViewPrevMeals.this));
-    }
-
-    private void btnPress(Button button, final Intent intent) {
-        button.setOnClickListener(new View.OnClickListener() {
+        prevMealsBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intent);
+                finish();
             }
         });
     }

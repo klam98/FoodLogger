@@ -37,19 +37,15 @@ public class SubscribePremium extends AppCompatActivity {
         Button subscribePremiumBackBtn = (Button) findViewById(R.id.sub_back_btn);
         submitButton = (Button) findViewById(R.id.submitButton);
 
-        btnPress(subscribePremiumBackBtn, LoggedInMenu.makeIntent(SubscribePremium.this));
+        subscribePremiumBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         subBtnPress(submitButton, LoggedInMenu.makeIntent(SubscribePremium.this));
     }
 
-    // regular button press for the back button
-    private void btnPress(Button button, final Intent intent) {
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(intent);
-            }
-        });
-    }
 
     // subscribe button press that modifies static boolean isPremiumUser and displays msg
     private void subBtnPress(Button button, final Intent intent) {
@@ -59,6 +55,7 @@ public class SubscribePremium extends AppCompatActivity {
                 LoggedInMenu.setIsPremiumUser(true);
                 Toast toast = Toast.makeText(SubscribePremium.this, "You are now a premium user!", Toast.LENGTH_LONG);
                 toast.show();
+                finish();
                 startActivity(intent);
             }
         });

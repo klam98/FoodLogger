@@ -11,7 +11,6 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.Spinner;
@@ -31,14 +30,14 @@ public class AnalyzeMeal extends AppCompatActivity {
     Button takeMealPhotoBtn;
     Button analyzeMealPhotoBtn;
     Button generateReportBtn;
-    ImageButton backBtn;
+    Button backBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.analyze_meal);
 
-        backBtn = (ImageButton) findViewById(R.id.backBtn);
+        backBtn = (Button) findViewById(R.id.backBtn);
         takeMealPhotoBtn = (Button) findViewById(R.id.take_meal_photo_btn);
         analyzeMealPhotoBtn = (Button) findViewById(R.id.analyze_meal_photo_btn);
         generateReportBtn = (Button) findViewById(R.id.generate_report_button);

@@ -15,17 +15,14 @@ public class Help  extends AppCompatActivity {
         setContentView(R.layout.help);
 
         Button helpBackBtn = (Button) findViewById(R.id.help_back_btn);
-        btnPress(helpBackBtn, LoggedInMenu.makeIntent(Help.this));
-    }
-
-    private void btnPress(Button button, final Intent intent) {
-        button.setOnClickListener(new View.OnClickListener() {
+        helpBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intent);
+                finish();
             }
         });
     }
+
 
     public static Intent makeIntent(Context context) {
         return new Intent(context, Help.class);
