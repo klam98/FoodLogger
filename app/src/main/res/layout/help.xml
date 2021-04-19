@@ -14,22 +14,22 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.732" />
+        app:layout_constraintVertical_bias="0.739" />
 
     <TextView
         android:id="@+id/textView28"
-        android:layout_width="318dp"
-        android:layout_height="38dp"
+        android:layout_width="291dp"
+        android:layout_height="29dp"
         android:text="Sign out of the current account."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953" />
+        app:layout_constraintVertical_bias="0.952" />
 
     <TextView
         android:id="@+id/textView23"
@@ -58,26 +58,26 @@
     <TextView
         android:id="@+id/textView27"
         android:layout_width="335dp"
-        android:layout_height="54dp"
+        android:layout_height="39dp"
         android:text="View photos of previous meals that have been taken using FoodLogger."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657" />
+        app:layout_constraintVertical_bias="0.64" />
 
     <TextView
         android:id="@+id/textView24"
-        android:layout_width="335dp"
-        android:layout_height="54dp"
+        android:layout_width="352dp"
+        android:layout_height="42dp"
         android:text="Subscribe to FoodLogger premium to have additional features such as offline storage of meals and reports."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
+        app:layout_constraintVertical_bias="0.81" />
 
     <TextView
         android:id="@+id/textView17"
@@ -143,10 +143,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.886" />
+        app:layout_constraintVertical_bias="0.902" />
 
     <Button
         android:id="@+id/help_back_btn"
